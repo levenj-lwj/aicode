@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人博客</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">我的博客</a>
+            <button class="nav-toggle" aria-label="切换菜单">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">首页</a>
+                <a href="#articles" class="nav-link">文章</a>
+                <a href="#categories" class="nav-link">分类</a>
+                <a href="#about" class="nav-link">关于我</a>
+            </div>
+            <div class="nav-search">
+                <input type="text" placeholder="搜索文章..." id="search-input">
+                <button id="search-btn">搜索</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <main class="main-content">
+        <!-- 首页 -->
+        <section id="home" class="page active">
+            <div class="hero">
+                <h1>欢迎来到我的博客</h1>
+                <p>分享技术、生活和思考</p>
+            </div>
+
+            <div class="featured-section">
+                <h2>最新文章</h2>
+                <div class="articles-grid" id="latest-articles">
+                    <!-- 最新文章将通过JS动态加载 -->
+                </div>
+            </div>
+
+            <div class="featured-section">
+                <h2>热门推荐</h2>
+                <div class="articles-grid" id="popular-articles">
+                    <!-- 热门文章将通过JS动态加载 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 文章列表页 -->
+        <section id="articles" class="page">
+            <div class="page-header">
+                <h2>所有文章</h2>
+                <div class="filter-options">
+                    <select id="sort-select">
+                        <option value="newest">最新优先</option>
+                        <option value="oldest">最旧优先</option>
+                        <option value="popular">最受欢迎</option>
+                    </select>
+                </div>
+            </div>
+            <div class="articles-list" id="all-articles">
+                <!-- 所有文章将通过JS动态加载 -->
+            </div>
+        </section>
+
+        <!-- 分类标签页 -->
+        <section id="categories" class="page">
+            <h2>文章分类</h2>
+            <div class="categories-container" id="categories-list">
+                <!-- 分类将通过JS动态加载 -->
+            </div>
+        </section>
+
+        <!-- 关于我页面 -->
+        <section id="about" class="page">
+            <div class="about-container">
+                <div class="about-profile">
+                    <img src="https://picsum.photos/300/300" alt="个人头像" class="profile-img">
+                    <h2>关于我</h2>
+                    <p>一名热爱技术的开发者，喜欢分享知识和经验。</p>
+                </div>
+                <div class="about-details">
+                    <h3>个人简介</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eu ultricies lacinia, nunc nisl aliquam nisl, eu aliquam nisl nunc eu nisl. Nullam auctor, nisl eu ultricies lacinia, nunc nisl aliquam nisl, eu aliquam nisl nunc eu nisl.</p>
+                    <h3>技能</h3>
+                    <ul>
+                        <li>Web开发</li>
+                        <li>UI/UX设计</li>
+                        <li>项目管理</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 文章详情页 (默认隐藏) -->
+        <section id="article-detail" class="page">
+            <div class="article-detail-container">
+                <button class="back-btn" id="back-to-list">返回列表</button>
+                <article class="article-full">
+                    <h1 id="article-title"></h1>
+                    <div class="article-meta">
+                        <span id="article-date"></span>
+                        <span id="article-author"></span>
+                        <span id="article-category"></span>
+                    </div>
+                    <div id="article-content" class="article-content"></div>
+                </article>
+
+                <div class="comments-section">
+                    <h3>评论</h3>
+                    <div id="comments-container">
+                        <!-- 评论将通过JS动态加载 -->
+                    </div>
+                    <form id="comment-form" class="comment-form">
+                        <h4>发表评论</h4>
+                        <div class="form-group">
+                            <label for="comment-name">姓名</label>
+                            <input type="text" id="comment-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment-email">邮箱</label>
+                            <input type="email" id="comment-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment-content">评论内容</label>
+                            <textarea id="comment-content" rows="5" required></textarea>
+                        </div>
+                        <button type="submit">提交评论</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- 搜索结果页 (默认隐藏) -->
+        <section id="search-results" class="page">
+            <div class="page-header">
+                <h2>搜索结果</h2>
+                <button class="back-btn" id="back-from-search">返回</button>
+            </div>
+            <div class="articles-list" id="search-results-container">
+                <!-- 搜索结果将通过JS动态加载 -->
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>&copy; 2023 我的个人博客. 保留所有权利.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

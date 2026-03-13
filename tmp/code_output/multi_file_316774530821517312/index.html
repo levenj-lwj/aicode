@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简易任务记录工具</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>我的任务清单</h1>
+            <p>简单高效地管理您的日常任务</p>
+        </header>
+
+        <div class="task-input-section">
+            <input type="text" id="taskInput" placeholder="输入新任务...">
+            <button id="addTaskBtn">添加任务</button>
+        </div>
+
+        <div class="filter-section">
+            <button class="filter-btn active" data-filter="all">全部</button>
+            <button class="filter-btn" data-filter="active">待完成</button>
+            <button class="filter-btn" data-filter="completed">已完成</button>
+        </div>
+
+        <ul id="taskList" class="task-list">
+            <!-- 任务将通过JavaScript动态添加 -->
+        </ul>
+
+        <div class="task-stats">
+            <span id="tasksCount">0 个任务</span>
+            <button id="clearCompletedBtn">清除已完成</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

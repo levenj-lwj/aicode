@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的博客</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">我的博客</h1>
+            <button class="menu-toggle" aria-label="切换菜单">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#articles">文章</a></li>
+                <li><a href="#about">关于</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>欢迎来到我的博客</h2>
+                <p>分享知识与思考的地方</p>
+            </div>
+        </section>
+
+        <section id="articles" class="articles-section">
+            <h2 class="section-title">最新文章</h2>
+            <div class="articles-container">
+                <article class="article-card" data-id="1">
+                    <img src="https://picsum.photos/800/600?random=1" alt="文章图片">
+                    <div class="article-content">
+                        <h3>前端开发的最佳实践</h3>
+                        <p class="article-date">2023年10月15日</p>
+                        <p class="article-excerpt">探索现代前端开发中的最佳实践和技巧，提高代码质量和开发效率...</p>
+                        <button class="read-more">阅读更多</button>
+                    </div>
+                </article>
+
+                <article class="article-card" data-id="2">
+                    <img src="https://picsum.photos/800/600?random=2" alt="文章图片">
+                    <div class="article-content">
+                        <h3>响应式设计指南</h3>
+                        <p class="article-date">2023年10月10日</p>
+                        <p class="article-excerpt">学习如何创建适应各种屏幕尺寸的网站，提供一致的用户体验...</p>
+                        <button class="read-more">阅读更多</button>
+                    </div>
+                </article>
+
+                <article class="article-card" data-id="3">
+                    <img src="https://picsum.photos/800/600?random=3" alt="文章图片">
+                    <div class="article-content">
+                        <h3>JavaScript ES2023 新特性</h3>
+                        <p class="article-date">2023年10月5日</p>
+                        <p class="article-excerpt">了解JavaScript最新版本中添加的新功能和语法改进...</p>
+                        <button class="read-more">阅读更多</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="article-detail" class="article-detail hidden">
+            <button class="back-button">返回列表</button>
+            <div class="article-full">
+                <h2 class="article-title"></h2>
+                <p class="article-meta"></p>
+                <img src="" alt="" class="article-image">
+                <div class="article-body"></div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2 class="section-title">关于我</h2>
+            <div class="about-content">
+                <img src="https://picsum.photos/400/400?random=4" alt="个人照片">
+                <div class="about-text">
+                    <p>您好！我是一名前端开发者，热爱创建美观且功能强大的网站。</p>
+                    <p>这个博客是我分享知识、经验和思考的地方。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2023 我的博客. 保留所有权利.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
